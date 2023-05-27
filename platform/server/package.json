@@ -1,0 +1,32 @@
+{
+  "name": "Mesh2CapServer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "client-sessions": "^0.8.0",
+    "compression": "^1.7.2",
+    "express": "^4.16.4",
+    "fs": "0.0.1-security",
+    "jquery": "^3.2.1",
+    "mongodb": "^3.1.0-beta4",
+    "pug": "^2.0.0-rc.2",
+    "request": "^2.88.0",
+    "three": "^0.85.2",
+    "uuid": "^3.2.1"
+  },
+  "scripts": {
+    "start": "node --harmony ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Dave Zhenyu Chen",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify-css": "^0.14.0",
+    "mongoose": "^5.0.0"
+  }
+}

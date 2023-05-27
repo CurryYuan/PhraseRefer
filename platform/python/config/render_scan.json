@@ -1,0 +1,15 @@
+{
+    "assetInfo": {
+        "defaultUp": [ 0, 0, 1 ],
+        "defaultFront": [ -1, 0, 0],
+        "defaultUnit": 1,
+        "materialSidedness": "Front",
+        "useVertexColors": true,
+        "computeNormals": true
+    },
+    "view": {
+        "phi": -0.7853981633974483,
+        "theta":  0.5235987755982988,
+        "distanceScale": 1.5
+    }
+}

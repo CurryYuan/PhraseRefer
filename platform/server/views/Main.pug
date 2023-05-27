@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+	head
+		//- link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
+		//- link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css")
+		link(rel="stylesheet" href="/offline/jquery-ui.min.css")
+		link(rel="stylesheet" href="/css/MeshViewer.css")
+		script(src="/offline/jquery-3.2.1.slim.min.js")
+		script(src="/offline/popper.min.js")
+		title= "PhraseRefer | Main"
+		meta(charset= "UTF-8")
+	body
+		script(src="/build/Bundle.js")
+		nav.navbar.fixed-top(id="navbar", style="background:#001a44; height: 60px") 
+			a.navbar-brand(href='/apps/main',style='color:#ffffff;font-size: 20px;') &nbsp;PhraseRefer
+			div(style="display: inline-block; float: right;")
+				select.form-control(id="scene_select", style="font-size: 16px; width:250px; float: left; position: relative; margin-right: 15px;")
+				button.btn.btn-primary(id="submit_view", style="font-size: 16px; top: 2px; height: 36px; width: 100px; float: left; position: relative; margin-right: 5px; border-radius: 4px;") View
+		div(id="root_ui" style="position: relative; top: 70px; width: 100%; height: 100%")
+		
+		script.
+			$(window).on('load', function () {
+				var main = null;
+				main = new Main();
+				main.init(!{params});
+			});

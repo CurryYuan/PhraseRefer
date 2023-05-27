@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+	head
+		//- link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css")
+		//- link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
+		link(rel="stylesheet" href="/offline/jquery-ui.min.css")
+		link(rel="stylesheet" href="/css/MeshViewer.css")
+		script(src="/offline/jquery-3.2.1.slim.min.js")
+		script(src="/offline/popper.min.js")
+		title= "Mesh2Cap | Select"
+		meta(charset= "UTF-8")
+	body
+		script(src="/build/Bundle.js")
+		nav.navbar.fixed-top(id="navbar", style="background:#001a44; height: 60px") 
+			a.navbar-brand(href='/apps/main',style='color:#ffffff;font-size: 20px;') &nbsp;Mesh2Cap
+			//- div(id="select_container", style={display: "inline-block", float: "right"})
+			//- 	select.form-control(id="scene_select", style="top: 8px; width:250px; float: left; position: relative; margin-right: 15px;")
+			//- 	button.btn-primary(id="submit_select", style="top: 8px; height: 34px; width: 80px; float: right; position: relative; margin-right: 25px; border-radius: 4px;") Display
+		div(id="id_div_root")
+
+		script.
+			$(window).on('load', function () {
+				var selector = null;
+				selector = new MeshSelect();
+				selector.init(!{params});
+			});

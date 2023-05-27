@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+	head
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+		link(rel="stylesheet" href="/offline/jquery-ui.min.css")
+		link(rel="stylesheet" href="/css/MeshViewer.css")
+		script(src="/offline/jquery-3.2.1.slim.min.js")
+		script(src="/offline/popper.min.js")
+		title= "Mesh2Cap | Annotator"
+		meta(charset= "UTF-8")
+	body
+		script(src="/build/Bundle.js")
+		nav.navbar.navbar-fixed-top(id="navbar", style="background:#001a44; height: 60px") 
+			a.navbar-brand(href='/apps/main',style='color:#ffffff;font-size: 20px;') &nbsp;Mesh2Cap
+                 
+		div(id="id_div_root")
+
+		script.
+			$(window).on('load', function () {
+				var error = null;
+				error = new ErrorPage();
+				error.init();
+			});

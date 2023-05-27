@@ -18,18 +18,22 @@ Extensive results confirm significant improvements, i.e., previous state-of-the-
 ## Dataset
 We provide the phrase-level annotations for Nr3D, Sr3D and ScanRefer. The annotations are stored in the json format under the `data` folder. Each json file contains the annotations for one dataset. The format of the json file is as follows:
 ```json
-    {
-        "scene_id": "scene0151_00",
-        "object_id": "8",   // the object id in the scannet
-        "ann_id": "30056",
-        "description": "Do not choose the large rectangle table covered with junk. Choose the small round table tucked next to the round chair.",
-        "position_start": "18",
-        "position_end": "56",
-        "labeled_id": "4",   // the object id of the phrase
-        "labeled_phrase": "large rectangle table covered with junk",
-        "is_sure": 1
-    },
+{
+    "scene_id": "scene0000_00",  # scene id in ScanNet
+    "object_id": "2",         # object id in ScanNet
+    "ann_id": "0",          # annotation id 
+    "description": "this is a long table. it is facing four bar stools.",   # description
+    "position_start": "35",     # phrase start pos
+    "position_end": "49",       # phrase end pos
+    "labeled_id": "30",         # object id of phrase
+    "labeled_phrase": "four bar stools",    # phrase
+    "is_sure": 1        # confidence of annotation
+},
 ```
+
+## Annotation Platform
+The annotation platform is under `platform` folder.
+We build based on [ScanRefer_Browser](https://github.com/daveredrum/ScanRefer_Browser).
 
 ## Framework
 ### Cross-modal Transformer with Phrase-Object Alignment (POA) Optimization

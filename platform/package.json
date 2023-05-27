@@ -1,0 +1,48 @@
+{
+  "name": "Mesh2Cap",
+  "version": "1.0.0",
+  "description": "Crowdsourcing annotation web app for describing ScanNet objects",
+  "main": "client/build/Bundle.js",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^7.3.0",
+    "browserify": "^14.4.0",
+    "browserify-css": "^0.14.0",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.7",
+    "react-bootstrap": "^0.31.3",
+    "sass": "^1.4.0",
+    "watchify": "^3.11.0"
+  },
+  "dependencies": {
+    "csv-parse": "^2.0.4",
+    "d3": "^4.10.0",
+    "earcut": "^2.1.3",
+    "fs": "0.0.1-security",
+    "mathjs": "^4.4.2",
+    "npm-install-missing": "^0.1.4",
+    "numeric": "^1.2.6",
+    "plotly.js": "^1.42.5",
+    "react": "^16.2.0",
+    "react-autosuggest": "^9.4.2",
+    "react-dom": "^16.2.0",
+    "react-slick": "^0.23.1",
+    "three": "*",
+    "webworkify": "^1.5.0"
+  },
+  "scripts": {
+    "build": "mkdir -p ./client/build && browserify ./client/js/apps/Main/Main.js ./client/js/apps/ErrorPage/ErrorPage.js ./client/js/apps/MeshVerify/MeshVerify.js ./client/js/apps/MeshSelect/MeshSelect.js ./client/js/apps/MeshViewer/MeshViewer.js ./client/js/apps/MeshAnnotator/MeshAnnotator.js ./client/js/apps/Common/Common.js --standalone Base -o ./client/build/Bundle.js -t [ babelify --presets [ es2015 react ] ]",
+    "watch": "mkdir -p ./client/build && watchify ./client/js/apps/Main/Main.js ./client/js/apps/ErrorPage/ErrorPage.js ./client/js/apps/MeshVerify/MeshVerify.js ./client/js/apps/MeshSelect/MeshSelect.js ./client/js/apps/MeshViewer/MeshViewer.js ./client/js/apps/MeshAnnotator/MeshAnnotator.js ./client/js/apps/Common/Common.js --standalone Base -o ./client/build/Bundle.js -t [ babelify --presets [ es2015 react ] ] --debug --verbose"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "author": "Dave Zhenyu Chen",
+  "license": "ISC"
+}
