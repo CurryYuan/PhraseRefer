@@ -2,7 +2,7 @@
 
 **Toward Explainable and Fine-Grained 3D Grounding through Referring Textual Phrases** [[Arxiv]](https://arxiv.org/abs/2207.01821) [[Project]](https://yanx27.github.io/phraserefer/)
 
-![1](figures/figure1.png)
+<img src=figures/figure1.png width=70%>
 
 
 ## Abstract
