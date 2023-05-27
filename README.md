@@ -2,10 +2,34 @@
 
 **Toward Explainable and Fine-Grained 3D Grounding through Referring Textual Phrases** [[Arxiv]](https://arxiv.org/abs/2207.01821) [[Project]](https://yanx27.github.io/phraserefer/)
 
-Code will be released here.
+![1](figures/figure1.png)
+
 
 ## Abstract
-Recent progress on 3D scene understanding has explored visual grounding (3DVG) to localize a target object through a language description. However, existing methods only consider the dependency between the entire sentence and the target object, thus ignoring fine-grained relationships between contexts and non-target ones. In this paper, we extend 3DVG to a more reliable and explainable task, called **3D Phrase Aware Grounding (3DPAG)**. The 3DPAG task aims to localize the target object in the 3D scenes by explicitly identifying all phrase-related objects and then conducting reasoning according to contextual phrases. To tackle this problem, we label about 400K phrase-level annotations from 170K sentences in available 3DVG datasets, i.e., Nr3D, Sr3D and ScanRefer. By tapping on these developed datasets, we propose **a novel framework, i.e., PhraseRefer**, which conducts phrase-aware and object-level representation learning through phrase-object alignment optimization as well as phrase-specific pre-training. In our setting, we extend previous 3DVG methods to the phrase-aware scenario and provide metrics to measure **the explainability of the 3DPAG task**. Extensive results confirm that 3DPAG effectively boosts the 3DVG, and PhraseRefer achieves **state-of-the-arts** across three datasets, i.e., 63.0%, 54.4% and 55.5% overall accuracy on Sr3D, Nr3D and ScanRefer, respectively.
+Recent progress in 3D scene understanding has explored visual grounding (3DVG) to localize a target object through a language description.
+However, existing methods only consider the dependency between the entire sentence and the target object, ignoring fine-grained relationships between contexts and non-target ones. 
+In this paper, we extend 3DVG to a more fine-grained and interpretable task, called 3D Phrase Aware Grounding (**3DPAG**).
+The 3DPAG task aims to localize the target objects in a 3D scene by explicitly identifying all phrase-related objects and then conducting the reasoning according to contextual phrases.
+To tackle this problem, we manually labeled about {**227K phrase-level annotations**} using a self-developed platform, from 88K sentences of widely used 3DVG datasets, i.e., Nr3D, Sr3D and ScanRefer.
+By tapping on our datasets, we can extend previous 3DVG methods to the fine-grained phrase-aware scenario.
+It is achieved through the proposed novel phrase-object alignment optimization and phrase-specific pre-training, boosting conventional 3DVG performance as well.
+Extensive results confirm significant improvements, i.e., previous state-of-the-art method achieves **3.9\%, 3.5\% and 4.6\%** overall accuracy gains on Nr3D, Sr3D and ScanRefer respectively.
+
+## Dataset
+We provide the phrase-level annotations for Nr3D, Sr3D and ScanRefer. The annotations are stored in the json format. Each json file contains the annotations for one dataset. The format of the json file is as follows:
+```json
+    {
+        "scene_id": "scene0151_00",
+        "object_id": "8",   // the object id in the scannet
+        "ann_id": "30056",
+        "description": "Do not choose the large rectangle table covered with junk. Choose the small round table tucked next to the round chair.",
+        "position_start": "18",
+        "position_end": "56",
+        "labeled_id": "4",   // the object id of the phrase
+        "labeled_phrase": "large rectangle table covered with junk",
+        "is_sure": 1
+    },
+```
 
 ## Framework
 ### Cross-modal Transformer with Phrase-Object Alignment (POA) Optimization
