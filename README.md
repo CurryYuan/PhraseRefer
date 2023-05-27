@@ -16,7 +16,7 @@ It is achieved through the proposed novel phrase-object alignment optimization a
 Extensive results confirm significant improvements, i.e., previous state-of-the-art method achieves **3.9\%, 3.5\% and 4.6\%** overall accuracy gains on Nr3D, Sr3D and ScanRefer respectively.
 
 ## Dataset
-We provide the phrase-level annotations for Nr3D, Sr3D and ScanRefer. The annotations are stored in the json format. Each json file contains the annotations for one dataset. The format of the json file is as follows:
+We provide the phrase-level annotations for Nr3D, Sr3D and ScanRefer. The annotations are stored in the json format under the `data` folder. Each json file contains the annotations for one dataset. The format of the json file is as follows:
 ```json
     {
         "scene_id": "scene0151_00",
